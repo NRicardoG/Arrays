@@ -54,3 +54,5 @@ console.log(str);
 let arr9 = ['apple','banana','orange'];
 let index = arr9.indexOf('banana');
 console.log(index);
+
+let prueba = "";
