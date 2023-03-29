@@ -55,4 +55,51 @@ let arr9 = ['apple','banana','orange'];
 let index = arr9.indexOf('banana');
 console.log(index);
 
-let prueba = "";
+//metodo FOREACH
+//Ejecuta una funcion para cada elemento del array.
+
+let arr10 = [1,2,3];
+arr10.forEach(function(element) {
+    console.log(element);
+});
+
+//metodo MAP
+//Crea un nuevo array con los resultados de llamar una funcion para cada elemento del array.
+
+let arr11 = [1,2,3];
+let mappedArr = arr11.map(function(element) {
+    return element * 2;
+});
+console.log(mappedArr); //[2,4,6]
+
+//metodo FLITER
+//Crea un nuevo array con todos los elementos que cumplan una condicion especifica en una funcion.
+
+let arr12 = [1,2,3,4,5];
+let filteredArr = arr12.filter(function(element) {
+    return element % 2 === 0;
+});
+console.log(filteredArr); //[2,4]
+
+//metodo REDUCE 
+//Reduce el array a un único valor mediante la ejecución de una función para cada elemento del array.
+
+let arr13 = [1,2,3,4,5];
+let sum = arr13.reduce(function(acumulator, currentValue) {
+    return acumulator + currentValue;
+});
+console.log(sum); //15
+
+let arr14 = [5,10,2,8,3];
+let maxNumber = arr14.reduce(function(acumulator, currentValue) {
+    return Math.max(acumulator , currentValue);
+});
+console.log(maxNumber); //10
+
+let arr15 = [5,10,2,8,3];
+let sum = arr15.reduce(function(acumulator, currentValue) {
+    return acumulator + currentValue;
+});
+let average = sum / arr15.length; 
+console.log(average); //5.6
+
